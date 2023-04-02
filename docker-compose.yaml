@@ -1,0 +1,14 @@
+# https://hub.docker.com/r/cm2network/csgo/
+version: "3"
+services:
+  csgo-server:
+    image: cm2network/csgo:latest
+    container_name: csgo-server
+    restart: unless-stopped
+    ports:
+      - 27015:27015/udp
+      - 27015:27015
+    volumes:
+      - "./csgo-data/:/home/steam/csgo-dedicated/"
+    env_file:
+          - csgo-server.env
