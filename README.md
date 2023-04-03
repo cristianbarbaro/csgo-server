@@ -2,6 +2,7 @@
 
 * Edit variables with your data (get your *RCDS_TOKEN* from https://steamcommunity.com/dev/managegameservers):
   * `cp csgo-server.env-example csgo-server.env`
+  * `cp env-example .env`
   
 * Run docker compose:
   * `docker compose up -d`

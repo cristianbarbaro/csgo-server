@@ -6,11 +6,9 @@ services:
     container_name: csgo-server
     restart: unless-stopped
     ports:
-      - 27015:27015/udp
-      - 27015:27015
-      - 27020:27020/udp
-      - 27020:27020
+      - ${SRCDS_PORT}:${SRCDS_PORT}/udp
+      - ${SRCDS_PORT}:${SRCDS_PORT}
     volumes:
       - "./csgo-data/:/home/steam/csgo-dedicated/"
     env_file:
-          - csgo-server.env
+      - csgo-server.env
