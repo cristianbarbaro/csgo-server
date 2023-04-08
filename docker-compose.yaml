@@ -11,4 +11,17 @@ services:
     volumes:
       - "./csgo-data/:/home/steam/csgo-dedicated/"
     env_file:
-      - csgo-server.env
+      - variables.env
+  csgo-rcon:
+    image: itzg/rcon
+    container_name: csgo-rcon
+    ports:
+      - "8000:4326"
+      - "4327:4327"
+    volumes:
+      - "./rcon-data/:/opt/rcon-web-admin/db"
+    env_file:
+      - variables.env
+    depends_on:
+      - csgo-server
+    restart: unless-stopped

@@ -1,3 +1,4 @@
 csgo-data/
-csgo-server.env
+rcon-data/
+variables.env
 .env
