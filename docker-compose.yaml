@@ -16,8 +16,8 @@ services:
     image: itzg/rcon
     container_name: csgo-rcon
     ports:
-      - "8000:4326"
-      - "4327:4327"
+      - ${RCONWEB_PORT}:4326
+      - 4327:4327
     volumes:
       - "./rcon-data/:/opt/rcon-web-admin/db"
     env_file:
