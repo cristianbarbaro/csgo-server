@@ -7,7 +7,7 @@
 * Run docker compose:
   * `docker compose up -d`
 
-* Go to http://localhost:4326 and put credentials defined in `.env` file. 
+* Go to http://localhost:4326 and put credentials defined in `variables.env` file (*RWA_USERNAME* and *RWA_PASSWORD* values). 
 
 * More ENV variables https://hub.docker.com/r/cm2network/csgo.
 
